@@ -55,10 +55,10 @@
   cursor: pointer;
   transition: opacity 0.15s, box-shadow 0.15s;
 }
-#options:hover{
+#options-index:hover{
   opacity: 0.9;
 }
-#options:active{
+#options-index:active{
   box-shadow:none
 }
 #emergency{
