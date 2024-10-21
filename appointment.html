@@ -64,7 +64,7 @@
 
     <div id="index-container" style="display: none;">
       <div id="header">
-        <span onclick="back()" id="return-icon">Back</span>
+        <span onclick="back('index')" id="return-icon">Back</span>
       </div>
       <div id="main-body">
         <div id="welcome-index">Welcome,</div>
@@ -74,7 +74,7 @@
           <button id="options-index"onclick="been()">A specific treatment</button>
           <button id="options-index"onclick="been()">Booking an<br>appointment</button>
           <button id="options-index"onclick="been()">Purchasing goods</button>
-          <button id="options-index"onclick="been()">An enquiry</button>
+          <button id="options-index"onclick="otw()">An enquiry</button>
           <button id="emergency">EMERGENCY<p id="charge">RM20 per request</p></button>
         </div>
       </div>
@@ -87,7 +87,7 @@
 
     <div id="index-container-chinese"  style="display: none;">
       <div id="header">
-        <span onclick="back()" id="return-icon">Back</span>
+        <span onclick="back('index')" id="return-icon">Back</span>
       </div>
       <div id="main-body">
         <div id="welcome-index">欢迎,</div>
@@ -97,7 +97,7 @@
           <button id="options-index"onclick="been()">具体治疗</button>
           <button id="options-index"onclick="been()">预约</button>
           <button id="options-index"onclick="been()">买东西</button>
-          <button  id="options-index"onclick="been()">询问</button>
+          <button  id="options-index"onclick="otw()">询问</button>
           <a><button id="emergency">紧急<p id="charge">每次请求 RM20</p></button></a>
         </div>
       </div>
@@ -110,7 +110,7 @@
 
     <div id="index-container-malay" style="display: none;">
       <div id="header">
-        <span onclick="back()" id="return-icon">Back</span>
+        <span onclick="back('index')" id="return-icon">Back</span>
       </div>
       <div id="main-body">
         <div id="welcome-index">Selamat datang,</div>
@@ -120,7 +120,7 @@
           <button id="options-index"onclick="been()">Rawatan khusus</button>
           <button id="options-index"onclick="been()">Tempah janji temu</button>
           <button id="options-index"onclick="been()">Membeli barang</button>
-          <button id="options-index"onclick="been()">Siasatan</button>
+          <button id="options-index"onclick="otw()">Siasatan</button>
           <button id="emergency">KECEMASAN<p id="charge">RM20 setiap permintaan</p></button>
         </div>
       </div>
@@ -133,7 +133,7 @@
 
 
     <div id="been-container" style="display:none">
-      <div id="header"><span onclick="back1()" id="return-icon">Back</span></div>
+      <div id="header"><span onclick="back('been')" id="return-icon">Back</span></div>
       <div id="main-body">
         <div id="welcome-been">Welcome,</div>
         <div id="appointment">Have you been here before?</div>
@@ -150,7 +150,7 @@
     </div>
 
     <div id="been-container-malay" style="display:none;">
-      <div id="header"><span onclick="back1()" id="return-icon">Back</span></div>
+      <div id="header"><span onclick="back('been')" id="return-icon">Back</span></div>
       <div id="main-body">
         <div id="welcome-been">Selamat datang,</div>
         <div id="appointment">Adakah anda pernah ke sini sebelum ini?</div>
@@ -167,7 +167,7 @@
     </div>
 
     <div id="been-container-chinese" style="display:none;">
-      <div id="header"><span onclick="back1()" id="return-icon">Back</span></div>
+      <div id="header"><span onclick="back('been')" id="return-icon">Back</span></div>
       <div id="main-body">
         <div id="welcome-been">欢迎,</div>
         <div id="appointment">你以前来过这里吗？</div>
@@ -182,6 +182,57 @@
         </div>
       </div>
     </div>
+
+    <div id="otw-container" style="display:none;">
+      <div id="header"><span onclick="back('otw')" id="return-icon">Back</span></div>
+      <div id="main-body">
+        <div id="welcome-been">Thank you</div>
+        <div id="appointment">Our nurses have been notified,<br> please wait a moment.</div>
+        <div id="buttons" style="margin-top: 235px">
+          <a><button id="cancel">Cancel</button></a>
+          
+        </div>
+      </div>
+      <div id="footer" >
+        <div id="languages">
+          <span id="english">English</span><span id="chinese" onclick="otw_chinese()">中文</span><span id="malay" onclick="otw_chinese()">Bahasa Melayu</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="otw-container-chinese" style="display:none;">
+      <div id="header"><span onclick="back('otw')" id="return-icon">Back</span></div>
+      <div id="main-body">
+        <div id="welcome-been">谢谢</div>
+        <div id="appointment">我们的护士已收到通知，请等一下。</div>
+        <div id="buttons" style="margin-top: 235px">
+          <a><button id="cancel">取消</button></a>
+          
+        </div>
+      </div>
+      <div id="footer" >
+        <div id="languages">
+          <span id="english" onclick="otw_english()">English</span><span id="chinese">中文</span><span id="malay" onclick="otw_chinese()">Bahasa Melayu</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="otw-container-malay" style="display:none;">
+      <div id="header"><span onclick="back('otw')" id="return-icon">Back</span></div>
+      <div id="main-body">
+        <div id="welcome-been">Terima Kasih</div>
+        <div id="appointment">Jururawat kami telah dimaklumkan, sila tunggu.</div>
+        <div id="buttons" style="margin-top: 235px">
+          <a><button id="cancel">Batalkan</button></a>
+          
+        </div>
+      </div>
+      <div id="footer" >
+        <div id="languages">
+          <span id="english">English</span><span id="chinese" onclick="otw_chinese()">中文</span><span id="malay" onclick="otw_chinese()">Bahasa Melayu</span>
+        </div>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
-</html>
+</html> 
