@@ -7,7 +7,7 @@
   grid-template-rows: 25px 50px 150px;
   margin-top: 30px;
 }
-#welcome-index{
+#welcome-been{
   font-size: 24px;
   font-weight: bold;
   font-family: Outfit,Arial;
@@ -20,7 +20,7 @@
   font-family: Outfit,Arial;
   text-align: center;
 }
-#buttons{
+#buttons-been{
   display:flex;
   align-items: center;
   justify-content: center;
@@ -67,18 +67,4 @@
 a{
   text-decoration: none;
   color: #A6A6A6;
-}
-#return-icon{
-  width:25px;
-  position: fixed;
-  right:25px;
-  top:20px;
-  cursor: pointer;
-  transition: top 0.15s;
-}
-#return-icon:hover{
-  top:17.5px;
-}
-#return-icon:active{
-  top:20px;
 }
