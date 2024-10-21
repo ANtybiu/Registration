@@ -197,28 +197,33 @@ function back(){
 function back1(){
   if(language==="english"){
     englishBeen.style.display="none";
-    englishIndex.style.display="none";
-    englishContainer.style.display="flex";
-     malayContainer.style.display="none";
-     chineseContainer.style.display="none";
-    
+    englishIndex.style.display="flex";
+    englishContainer.style.display="none";
+    malayContainer.style.display="none";
+    chineseContainer.style.display="none";
+    malayBeen.style.display="none";
+    chineseBeen.style.display="none";
     chineseIndex.style.display="none";
     malayIndex.style.display="none";
   }else if(language==="malay"){
-    malayBeen.style.display="none";
-    malayIndex.style.display="none";
-    englishContainer.style.display="none";
-     malayContainer.style.display="flex";
-     chineseContainer.style.display="none"
+   englishBeen.style.display="none";
     englishIndex.style.display="none";
-    chineseIndex.style.display="none";
-  } else{
+    englishContainer.style.display="none";
+    malayContainer.style.display="none";
+    chineseContainer.style.display="none";
+    malayBeen.style.display="none";
     chineseBeen.style.display="none";
     chineseIndex.style.display="none";
-    englishContainer.style.display="none";
-     malayContainer.style.display="none";
-     chineseContainer.style.display="flex";
+    malayIndex.style.display="flex";
+  } else{
+    englishBeen.style.display="none";
     englishIndex.style.display="none";
+    englishContainer.style.display="none";
+    malayContainer.style.display="none";
+    chineseContainer.style.display="none";
+    malayBeen.style.display="none";
+    chineseBeen.style.display="none";
+    chineseIndex.style.display="flex";
     malayIndex.style.display="none";
     
   }
