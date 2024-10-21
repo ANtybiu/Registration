@@ -94,4 +94,27 @@ a{
   opacity: 1.0;
   box-shadow: none;
 }
-/*make github update my code!!!!!1!*/
+#otw-container,#otw-container-chinese,#otw-container-malay{
+  display: flex;
+  flex-direction: column;
+}
+#cancel{
+  width:350px;
+  height: 200px;
+  font-size: 20px;
+  background-color: #E01A1A;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 10px 10px 12.5px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: opacity 0.15s, box-shadow 0.15s;
+  font-family: Outfit,sans-serif;
+}
+#cancel:hover{
+  opacity: 0.9;
+}
+#cancel:active{
+  box-shadow: none;
+}
