@@ -197,8 +197,8 @@ function back(){
 function back1(){
   if(language==="english"){
     englishBeen.style.display="none";
-    englishIndex.style.display="flex";
-    englishContainer.style.display="none";
+    englishIndex.style.display="none";
+    englishContainer.style.display="flex";
      malayContainer.style.display="none";
      chineseContainer.style.display="none";
     
@@ -206,18 +206,18 @@ function back1(){
     malayIndex.style.display="none";
   }else if(language==="malay"){
     malayBeen.style.display="none";
-    malayIndex.style.display="flex";
+    malayIndex.style.display="none";
     englishContainer.style.display="none";
-     malayContainer.style.display="none";
+     malayContainer.style.display="flex";
      chineseContainer.style.display="none"
     englishIndex.style.display="none";
     chineseIndex.style.display="none";
   } else{
     chineseBeen.style.display="none";
-    chineseIndex.style.display="flex";
+    chineseIndex.style.display="none";
     englishContainer.style.display="none";
      malayContainer.style.display="none";
-     chineseContainer.style.display="none";
+     chineseContainer.style.display="flex";
     englishIndex.style.display="none";
     malayIndex.style.display="none";
     
