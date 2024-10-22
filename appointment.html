@@ -10,7 +10,9 @@
   </head>
   <body>
     <div id="main-container">
-      <div id="header"></div>
+      <div id="header">
+        
+      </div>
       <div id="main-body">
         <div id="welcome">Welcome,</div>
         <div id="appointment">Do you have an appointment?</div>
@@ -27,7 +29,9 @@
     </div>
 
     <div id="main-container-chinese" style="display:none;">
-      <div id="header"></div>
+      <div id="header">
+        
+      </div>
       <div id="main-body">
         <div id="welcome">欢迎,</div>
         <div id="appointment">你有预约吗?</div>
@@ -64,6 +68,11 @@
 
     <div id="index-container" style="display: none;">
       <div id="header">
+        <div id="cancel-container" style="display:none;">
+          <div id="info-icon"><img src="768px-Minimalist_info_Icon.png" id="info"></div>
+          <div id="alert">Your enquiry request has been canceled.</div>
+          <div id="close-alert" onclick="close_alert()">X</div>
+        </div>
         <span onclick="back('index')" id="return-icon">Back</span>
       </div>
       <div id="main-body">
@@ -87,6 +96,11 @@
 
     <div id="index-container-chinese"  style="display: none;">
       <div id="header">
+        <div id="cancel-container-chinese" style="display: none;">
+          <div id="info-icon"><img src="768px-Minimalist_info_Icon.png" id="info"></div>
+          <div id="alert">您的询问请求已被取消</div>
+          <div id="close-alert" onclick="close_alert()">X</div>
+        </div>
         <span onclick="back('index')" id="return-icon">Back</span>
       </div>
       <div id="main-body">
@@ -110,6 +124,11 @@
 
     <div id="index-container-malay" style="display: none;">
       <div id="header">
+        <div id="cancel-container-malay" style="display:none">
+          <div id="info-icon"><img src="768px-Minimalist_info_Icon.png" id="info"></div>
+          <div id="alert">Permintaan pertanyaan anda telah dibatalkan</div>
+          <div id="close-alert"  onclick="close_alert()">X</div>
+        </div>
         <span onclick="back('index')" id="return-icon">Back</span>
       </div>
       <div id="main-body">
@@ -133,7 +152,14 @@
 
 
     <div id="been-container" style="display:none">
-      <div id="header"><span onclick="back('been')" id="return-icon">Back</span></div>
+      <div id="header">
+        <span onclick="back('been')" id="return-icon">Back</span>
+        <div id="cancel-container" style="display:none;">
+          <div id="info-icon"><img src="768px-Minimalist_info_Icon.png" id="info"></div>
+          <div id="alert">Your enquiry request has been canceled.</div>
+          <div id="close-alert" onclick="close_alert()">X</div>
+        </div>
+      </div>
       <div id="main-body">
         <div id="welcome-been">Welcome,</div>
         <div id="appointment">Have you been here before?</div>
@@ -153,8 +179,8 @@
       <div id="header"><span onclick="back('been')" id="return-icon">Back</span></div>
       <div id="main-body">
         <div id="welcome-been">Selamat datang,</div>
-        <div id="appointment">Adakah anda pernah ke sini sebelum ini?</div>
-        <div id="buttons">
+        <div id="appointment">Adakah anda pernah ke sini<br>sebelum ini?</div>
+        <div id="buttons" style="margin-top: 225px;">
           <a><button id="options">Ada</button></a>
           <a><button id="options">Tidak ada </button></a>
         </div>
@@ -167,7 +193,14 @@
     </div>
 
     <div id="been-container-chinese" style="display:none;">
-      <div id="header"><span onclick="back('been')" id="return-icon">Back</span></div>
+      <div id="header">
+        <span onclick="back('been')" id="return-icon">Back</span>
+        <div id="cancel-container-chinese" style="display: none;">
+          <div id="info-icon"><img src="768px-Minimalist_info_Icon.png" id="info"></div>
+          <div id="alert">您的询问请求已被取消</div>
+          <div id="close-alert" onclick="close_alert()">X</div>
+        </div>
+      </div>
       <div id="main-body">
         <div id="welcome-been">欢迎,</div>
         <div id="appointment">你以前来过这里吗？</div>
@@ -187,9 +220,9 @@
       <div id="header"><span onclick="back('otw')" id="return-icon">Back</span></div>
       <div id="main-body">
         <div id="welcome-been">Thank you</div>
-        <div id="appointment">Our nurses have been notified,<br> please wait a moment.</div>
-        <div id="buttons" style="margin-top: 235px">
-          <a><button id="cancel">Cancel</button></a>
+        <div id="appointment" style="font-size:60px;">Our nurses have been notified,<br> please wait a moment.</div>
+        <div id="buttons" style="margin-top: 225px">
+          <a><button id="cancel" onclick="show_alert()">Cancel</button></a>
           
         </div>
       </div>
@@ -204,9 +237,9 @@
       <div id="header"><span onclick="back('otw')" id="return-icon">Back</span></div>
       <div id="main-body">
         <div id="welcome-been">谢谢</div>
-        <div id="appointment">我们的护士已收到通知，<br>请等一下。</div>
-        <div id="buttons" style="margin-top: 235px">
-          <a><button id="cancel">取消</button></a>
+        <div id="appointment"style="font-size:60px;">我们的护士已收到通知，<br>请等一下。</div>
+        <div id="buttons" style="margin-top: 225px">
+          <a><button id="cancel" onclick="show_alert()">取消</button></a>
           
         </div>
       </div>
@@ -221,9 +254,9 @@
       <div id="header"><span onclick="back('otw')" id="return-icon">Back</span></div>
       <div id="main-body">
         <div id="welcome-been">Terima Kasih</div>
-        <div id="appointment">Jururawat kami telah dimaklumkan,<br> sila tunggu.</div>
-        <div id="buttons" style="margin-top: 235px">
-          <a><button id="cancel">Batalkan</button></a>
+        <div id="appointment"style="font-size:60px;">Jururawat kami telah dimaklumkan,<br> sila tunggu.</div>
+        <div id="buttons" style="margin-top: 225px">
+          <a><button id="cancel" onclick="show_alert()">Batalkan</button></a>
           
         </div>
       </div>
@@ -233,6 +266,8 @@
         </div>
       </div>
     </div>
+
+    
     <script src="index.js"></script>
   </body>
 </html> 
