@@ -101,7 +101,7 @@ a{
 #cancel{
   width:350px;
   height: 200px;
-  font-size: 20px;
+  font-size: 26px;
   background-color: #E01A1A;
   color: white;
   font-weight: bold;
@@ -117,4 +117,39 @@ a{
 }
 #cancel:active{
   box-shadow: none;
+}
+#cancel-container,#cancel-container-chinese,#cancel-container-malay{
+  display: none;
+  background-color: #E01A1A;
+  color: white;
+  text-align: center;
+  align-items: center;
+  font-family: Outfit, sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 1000;
+  top:5px;
+}
+#info{
+  width:25px;
+  border-radius: 12.5px;
+  margin-left: 10px;
+}
+#alert{
+  margin-left: 10px;
+  margin-right: 25px;
+}
+#close-alert{
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #E01A1A;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+#close-alert:hover{
+  opacity: 0.9;
+  background-color: #f31e1e;
 }
