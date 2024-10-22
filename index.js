@@ -291,19 +291,32 @@ function back(ass){
 let englishOTW = document.getElementById('otw-container');
 let chineseOTW = document.getElementById('otw-container-chinese');
 let malayOTW = document.getElementById('otw-container-malay');
+let cancelText = document.getElementById('cancel');
+let blocked = '';
+let gotOne = 0;
+let nurseCalled = false;
+let counting = false;
+let countdownVar = document.getElementById('countdown');
+let countdownVar1 = document.getElementById('countdown1');
+let countdownVar2 = document.getElementById('countdown2');
 function otw(){
   if(language==="english"){
     englishOTW.style.display="flex"
     englishIndex.style.display="none"
+    countdown('english');
   }else if(language==="malay"){
     malayOTW.style.display="flex"
     malayIndex.style.display="none"
+    countdown('malay');
   } else{
     chineseOTW.style.display="flex"
     chineseIndex.style.display="none"
+    countdown('chinese');
   }
   console.log('asd')
-}
+  }
+
+
 function otw_english(){
   malayOTW.style.display= "none";
   englishOTW.style.display="flex"
@@ -313,6 +326,9 @@ function otw_english(){
   malayFooter.style.display="none"
   language="english";
   console.log(language);
+  
+  
+
 }
 function otw_chinese(){
   malayOTW.style.display= "none";
@@ -321,8 +337,9 @@ function otw_chinese(){
   footer.style.display="none";
   chineseFooter.style.display="flex";
   malayFooter.style.display="none"
-  language="english";
+  language="chinese";
   console.log(language);
+  
 }
 function otw_malay(){
   malayOTW.style.display= "flex";
@@ -331,8 +348,9 @@ function otw_malay(){
   footer.style.display="none";
   chineseFooter.style.display="none";
   malayFooter.style.display="flex"
-  language="english";
+  language="malay";
   console.log(language);
+  
 }
 
 let englishCancel = document.getElementById('cancel-container');
@@ -340,6 +358,7 @@ let chineseCancel = document.getElementById('cancel-container-chinese');
 let malayCancel = document.getElementById('cancel-container-malay');
 
 function show_alert(){
+  if(!blocked){
   if(language==="english"){
     englishCancel.style.display="flex";
     englishOTW.style.display="none";
@@ -347,6 +366,7 @@ function show_alert(){
     englishCancel.style.display="flex";
     englishCancel.style.display="flex";
     englishCancel.style.display="flex";
+    nurseCalled=false;
     setTimeout(function() {
       englishCancel.style.top="-30px";
       englishCancel.style.transition="top 0.3s"
@@ -359,12 +379,14 @@ function show_alert(){
   if(englishCancel.style.display==="flex"){
     console.log(englishCancel.style.display)
   }else{console.log(englishCancel.style.display)}
+  
   } else if(language==="chinese"){
     chineseCancel.style.display="flex";
     chineseOTW.style.display="none";
     chineseIndex.style.display="flex";
     chineseCancel.style.top="5px";
     chineseCancel.style.transition="top 0.15s"
+    nurseCalled=false;
     setTimeout(function() {
       chineseCancel.style.top="-30px";
       chineseCancel.style.transition="top 0.3s"
@@ -379,6 +401,7 @@ function show_alert(){
     malayIndex.style.display="flex";
     malayCancel.style.top="5px";
     malayCancel.style.transition="top 0.15s"
+    nurseCalled=false;
     setTimeout(function() {
       malayCancel.style.top="-30px";
       malayCancel.style.transition="top 0.3s"
@@ -387,10 +410,91 @@ function show_alert(){
   setTimeout(function() {
     malayCancel.style.display = "none";
 }, 5301);
-}}
+}}};
 function close_alert(){
   malayCancel.style.display="none";
   chineseCancel.style.display="none";
   englishCancel.style.display="none";
   console.log('close')
+}
+function countdown(lang){
+  
+  if(gotOne === 0 && !nurseCalled && !counting){
+    gotOne ++;
+  document.getElementById('cancel').style.opacity="0.6";
+  document.getElementById('cancel').style.cursor="not-allowed";
+  document.getElementById('cancel').style.boxShadow= "none";
+  document.getElementById('cancel1').style.opacity="0.6";
+  document.getElementById('cancel1').style.cursor="not-allowed";
+  document.getElementById('cancel1').style.boxShadow= "none";
+  document.getElementById('cancel2').style.opacity="0.6";
+  document.getElementById('cancel2').style.cursor="not-allowed";
+  document.getElementById('cancel2').style.boxShadow= "none";
+  blocked = true;
+  counting = true;
+  nurseCalled = true;
+  countdownVar.innerHTML = ` (10s)`
+  countdownVar1.innerHTML = ` (10s)`
+  countdownVar2.innerHTML = ` (10s)`
+  setTimeout(function() {
+    countdownVar.innerHTML = ` (9s)`
+    countdownVar1.innerHTML = ` (9)`
+    countdownVar2.innerHTML = ` (9s)`
+}, 1000);
+setTimeout(function() {
+  countdownVar.innerHTML = ` (8s)`
+    countdownVar1.innerHTML = ` (8s)`
+    countdownVar2.innerHTML = ` (8s)`
+}, 2000);
+setTimeout(function() {
+  countdownVar.innerHTML = ` (7s)`
+    countdownVar1.innerHTML = ` (7s)`
+    countdownVar2.innerHTML = ` (7s)`
+}, 3000);
+setTimeout(function() {
+  countdownVar.innerHTML = ` (6s)`
+    countdownVar1.innerHTML = ` (6s)`
+    countdownVar2.innerHTML = ` (6s)`
+}, 4000);
+setTimeout(function() {
+  countdownVar.innerHTML = ` (5s)`
+    countdownVar1.innerHTML = ` (5s)`
+    countdownVar2.innerHTML = ` (5s)`
+}, 5000);
+setTimeout(function() {
+  countdownVar.innerHTML = ` (4s)`
+    countdownVar1.innerHTML = ` (4s)`
+    countdownVar2.innerHTML = ` (4s)`
+}, 6000);
+setTimeout(function() {
+  countdownVar.innerHTML = ` (3s)`
+    countdownVar1.innerHTML = ` (3s)`
+    countdownVar2.innerHTML = ` (3s)`
+}, 7000);
+setTimeout(function() {
+  countdownVar.innerHTML = ` (2s)`
+    countdownVar1.innerHTML = ` (2s)`
+    countdownVar2.innerHTML = ` (2s)`
+}, 8000);
+setTimeout(function() {
+  countdownVar.innerHTML = ` (1s)`
+    countdownVar1.innerHTML = ` (1s)`
+    countdownVar2.innerHTML = ` (1s)`
+}, 9000);
+setTimeout(function() {
+  countdownVar.innerHTML = ``;
+  countdownVar1.innerHTML = ``
+  countdownVar2.innerHTML = ``
+  document.getElementById('cancel').removeAttribute('style');
+  document.getElementById('cancel1').removeAttribute('style');
+  document.getElementById('cancel2').removeAttribute('style');
+  nurseCalled= true;
+  blocked = false;
+  gotOne = 0;
+  counting=false;
+}, 10000);
+
+  
+  
+}
 }
